@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasi</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    body{
+        background-color: pink
+    }
+    .container{
+        width: 90vw;
+        max-width: 600px;
+        padding: 2em 1.5em;
+        background-color: rgb(255, 255, 240);
+        margin: 1em;
+        border-radius: 0.5em;
+    }
+    h4{
+        font-size: 2em;
+    }
+    .input-section{
+        margin: 0.5em 0;
+    }
+    label, .error-message{
+        display:  block;
+        font-size:  1em;
+    }                  
+     label{
+        margin-bottom: 0.5em;
+        font-size: 1em;
+     }               
+     .error-message{
+        margin-top: 0.2em;
+     }                   
+     input, button{
+        display: block;
+        outline: none;
+        width: 100%;
+        padding: 0.5em;
+        border-radius: 0.3em;
+    }
+    input{
+        padding: 1em 0.5em;
+        border: i.5px solid red;
+    }
+    button{
+        font-size: 1em;
+        background-color: pink;
+        border: none;
+        color: black;
+        padding: o.5em 0;
+        margin-top: 2em;
+    }           
+    .required-color{
+        color: red;
+    }        
+    .error{
+        border-color: red;
+    }                      
+    .valid{
+        border-color: green;
+    }                        
+    .hide{
+        display: none;
+    }                 
+    @media only screen and(max-width:450px){
+        .container{
+            font-size: 14px;
+        }
+    }                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+</style>
+<Script>
+    let namapelanggansalah= document.getElementById("nama-pelanggan-salah")
+    let namapelanggankosong= document.getElementById("nama-pelanggan-kosong")
+
+    let emailpelanggansalah= document.getElementById("email-pelanggan-salah")
+    let emailpelanggankosong= document.getElementById("email-pelanggan-kosong")
+
+    let jamkeberangkatantidaksesuai= document.getElementById("jam-keberangkatan-tidak-sesuai")
+    let jamkeberangkatankosong= document.getElementById("jam-keberangkatan-kosong")
+
+    let tujuankeberangkatantidaksesuai= document.getElementById("tujuan-keberangkatan-tidak-sesuai")
+    let tujuankeberangkatankosong= document.getElementById("jam-keberangkatan-kosong")
+
+    let jumlahtikettidaksesuai= document.getElementById("jumlah-tiket-tidak-sesuai")
+    let jumlahtiketkosong= document.getElementById("jumlah-tiket-kosong")
+   
+    let submitbutton= document.getElementById("submit")
+
+    let validclasses= document.getElementById("valid")
+ 
+    let invalidclasses= document.getElementById("error")
+
+     // Validate Nama
+    const nama = document.getElementById('nama').value;
+            if (!nama || nama. ) }
+            {
+                valid = false;
+                document.getElementById('email-pelanggan-salah').innerText = 'nama pelanggan tidak terdaftar';
+                document.getElementById('nama').classList.add('invalid');
+            } else {
+                document.getElementById('nama').classList.add('valid');
+            }
+
+            // Validate Email
+            const email = document.getElementById('email').value;
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!email || !emailRegex.test(email)) {
+                valid = false;
+                document.getElementById('emailError').innerText = 'Email harus valid.';
+                document.getElementById('email').classList.add('invalid');
+            } else {
+                document.getElementById('email').classList.add('valid');
+            }
+
+            // Validate Jam Keberangkatan
+            const jam = document.getElementById('jam').value;
+            const jamRegex = /^(?:[01]?[0-9]|2[0-3]):([0-5][0-9])$/;
+            if (!jam || !jamRegex.test(jam)) {
+                valid = false;
+                document.getElementById('jamError').innerText = 'Jam harus dalam format HH:MM dan antara 00:00 - 23:59.';
+                document.getElementById('jam').classList.add('invalid');
+            } else {
+                document.getElementById('jam').classList.add('valid');
+            }
+
+            // Validate Tujuan
+            const tujuan = document.getElementById('tujuan').value;
+            if (!tujuan) {
+                valid = false;
+                document.getElementById('tujuanError').innerText = 'Tujuan keberangkatan harus diisi.';
+                document.getElementById('tujuan').classList.add('invalid');
+            } else {
+                document.getElementById('tujuan').classList.add('valid');
+            }
+
+            // Validate Jumlah Tiket
+            const jumlah = document.getElementById('jumlah').value;
+            if (!jumlah || jumlah < 1 || jumlah > 10) {
+                valid = false;
+                document.getElementById('jumlahError').innerText = 'Jumlah tiket harus di antara 1 dan 10.';
+                document.getElementById('jumlah').classList.add('invalid');
+            } else {
+                document.getElementById('jumlah').classList.add('valid');
+            }
+
+</Script>
+<body>
+    <div class="container">
+        <form autocomplete="off">
+            <h4>Travel Mudah</h4>
+            <div class="input-section">
+                <label>Nama Pelanggan <span class="required-color">*</span></label>
+                <input type="text" placeholder="maksimum 30 karakter" id="nama-pelanggan" required/>
+                <span id="nama-pelanggan-salah" class="hide required-color error-message">nama pelanggan tidak terdaftar</span>
+                <span id="nama-pelanggan-kosong" class="hide required-color error-message">nama pelanggan tidak boleh kosong</span>
+            </div>
+            <div class="input-section">
+                <label>Email <span class="required-color">*</span></label>
+                <input type="email" placeholder="masukan email" id="email-pelanggan" required/>
+                <span id="email-pelanggan-salah" class="hide required-color error-message">email pelanggan tidak terdaftar</span>
+                <span id="email-pelanggan-kosong" class="hide required-color error-message">email pelanggan tidak boleh kosong</span>
+            </div>
+            <div class="input-section">
+                <label>Jam Keberangkatan <span class="required-color">*</span></label>
+                <input type="time" placeholder="masukan jam keberangkatan" id="jam-keberangkatan-pelanggan" required/>
+                <span id="jam-keberangkatan-tidak-sesuai" class="hide required-color error-message">jam keberangkatan harus diisi</span>            
+                <span id="jam-keberangkatan-kosong" class="hide required-color error-message">jam keberangkatan harus diisi</span>            
+            </div>
+            <div class="input-section">
+                <label>Tujuan Keberangkatan <span class="required-color">*</span></label>
+                <input type="text" placeholder="masukan tujuan" id="tujuan-pelanggan" required/>
+                <span id="tujuan-keberangkatan-tidaksesuai" class="hide required-color error-message">tujuan keberangkatan tidak sesuai</span>
+                <span id="tujuan-keberangkatan-kosong" class="hide required-color error-message">tujuan keberangkatan tidak boleh kosong</span>
+            </div>
+            <div class="input-section">
+                <label>Jumlah Tiket <span class="required-color">*</span></label>
+                <input type="number" placeholder="masukan angka 1-10" id="jumlah-tiket" required/>
+                <span id="jumlah-tiket-salah" class="hide required-color error-message">jumlah tiket tidak sesuai</span>
+                <span id="jumlah-tiket-kosong" class="hide required-color error-message">jumlah tiket tidak boleh kosong</span>
+            </div>
+            <button id="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

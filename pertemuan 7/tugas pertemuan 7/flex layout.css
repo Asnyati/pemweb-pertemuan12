@@ -1,0 +1,66 @@
+.gambaratas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+}
+.gambarbawah{
+    display: flex;
+    width: 1000px;
+    height: 50px;
+}
+.box{
+    width: 300px;
+    margin: 10px;
+    height: 80px;
+    display: flex;
+    border: 2px solid palevioletred;
+    background-color: aliceblue;
+}
+.box1{
+    width: 300px;
+    background-size: 50px;
+    height: 80px;
+    background-image: url(https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/274/2024/02/02/kadam-3039434606.jpg);
+}
+.box2{
+    width: 300px;
+    background-size: 100px;
+    height: 80px;
+    background-image: url(https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/hops/2021/10/90788950-EAA9-44CF-B820-14625F41792B.jpeg);
+}
+.box3{
+    width: 300px;
+    background-size: 100px;
+    height: 80px;
+    background-image: url(https://aksi.id/images/posts/1/2022/2022-02-24/db3b31638ebaa05d3510fc933e10ee36_1.jpg);
+}
+.box4{
+    width: 300px;
+    background-size: 100px;
+    height: 80px;
+    background-image: url(https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2022/08/28/4115446712.jpeg);
+}
+.box5{
+    width: 300px;
+    background-size: 100px;
+    height: 80px;
+    background-image: url(https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2022/12/26/980781638.jpg);
+}
+.box6{
+    width: 300px;
+    background-size: 100px;
+    height: 80px;
+    background-image: url(https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/664/2024/02/03/Kadam-Sidik-3884896835.jpg);
+}
+.box7{
+    width: 300px;
+    background-size: 100px;
+    height: 80px;
+    background-image: url(https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/142/2024/02/02/Profil-dan-Biodata-Lengkap-Husain-Basyaiban-Mulai-dari-Jurusan-Kuliah-dan-Ternyata-Keturunan-Blasteran-3175897295.jpg);
+}
+.box8{
+    width: 300px;
+    background-size: 100px;
+    height: 80px;
+    background-image: url(https://cdn.idntimes.com/content-images/community/2020/06/basyasman-20200619-164113-0-6173b9c98cfed260b6cc71867358eb0b.jpg);
+}

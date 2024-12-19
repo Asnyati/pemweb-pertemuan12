@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: pink;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+        .header-content img {
+            height: 100px;
+        }
+        .header-content h1 {
+            margin: 0 0 0 20px;
+        }
+        nav {
+            background-color: white;
+            border: 2px solid black;
+            margin: 5px 0;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        .contact-form {
+            background-color: #f0f0f0;
+            border: 2px solid black;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 8px;
+        }
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid black;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: pink;
+            border: 2px solid black;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        footer {
+            background-color: pink;
+            border: 2px solid black;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 12px;
+            text-align: center;
+        }
+        .social-icons img {
+            width: 80px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="logonia.jpg" alt="Logo">
+            <h1>ASNYATI - Contact</h1>
+        </div>
+        <nav>
+            <a href="indeks.html">About</a>
+            <a href="mygaleri.html">My Galeri</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Contact Us</h2>
+        <p>My contact</p>
+        <div class="contact-form">
+            <form action="submit_contact.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/nhyaa_asnyati?igsh=MWpxeDJkNGszcWFwaw==">
+                <img src="ig logo.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@nhyaasnyati?_t=8qpzLSnCrUC&_r=1">
+                <img src="ttk logo.png" alt="TikTok">
+            </a>
+        </div>
+        <h2>By Nia</h2>
+    </footer>
+</body>
+</html>
